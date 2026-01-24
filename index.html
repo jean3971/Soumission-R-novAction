@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RénovAction - Votre lien vers les entrepreneurs fiables</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: #2c3e50; color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: bold; }
+        .menu { display: flex; list-style: none; gap: 2rem; }
+        .menu a { color: white; text-decoration: none; }
+        
+        .hero { background: linear-gradient(135deg, #3498db, #2980b9); color: white; padding: 150px 0 100px; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.3rem; margin-bottom: 2rem; }
+        .btn {
+    background: #e74c3c;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* <- ajoute la transition ici */
+}
+
+.btn:hover {
+    transform: scale(1.1); /* un peu plus grand pour l'effet "Waaaw" */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* ombre plus visible */
+}
+
+        section { padding: 80px 0; }
+        .etapes { background: #f8f9fa; }
+        .etape { text-align: center; margin-bottom: 3rem; }
+        .etape h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #2c3e50; }
+        .services { background: white; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service { text-align: center; padding: 2rem; border: 1px solid #ddd; border-radius: 10px; }
+        .pourquoi { background: #ecf0f1; }
+        .pourquoi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .feature { text-align: center; }
+        
+        /* Formulaire */
+        .form-section { background: #f8f9fa; }
+        .form-container { max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 1.5rem; }
+        label { display: block; margin-bottom: 0.5rem; font-weight: bold; color: #2c3e50; }
+        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; }
+        .checkbox-group { display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap; }
+        .checkbox-group label { font-weight: normal; margin-bottom: 0; }
+        .btn-submit { background: #27ae60; color: white; padding: 15px 40px; font-size: 1.2rem; border: none; border-radius: 5px; cursor: pointer; width: 100%; }
+        .btn-submit:hover { background: #229954; }
+        .success-message { background: #d4edda; color: #155724; padding: 1rem; border-radius: 5px; text-align: center; display: none; }
+        
+        footer { background: #2c3e50; color: white; text-align: center; padding: 3rem 0; }
+        .contact { font-size: 1.3rem; margin-bottom: 1rem; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .menu { display: none; }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo" style="font-size:2rem; font-weight:bold;">
+    🛠️ <span style="color:#3498db;">Soumission</span> <span style="color:#e67e22;">RénovAction</span>
+</div>
+            <ul class="menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#comment">Comment ça marche</a></li>
+                <li><a href="#formulaire">Devis gratuit</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <section id="accueil" class="hero">
+    <div class="container">
+        <h1>Trouvez votre entrepreneur fiable</h1>
+        <p>Portes & fenêtres, cuisines, salles de bain. Service gratuit et sans engagement.</p>
+        <p style="font-size:1.05rem; margin-bottom:1.5rem; opacity:0.95;">
+RénovAction vous met en relation avec jusqu’à <strong>3 entrepreneurs licenciés RBQ</strong> dans votre région.
+</p>
+        <a href="#formulaire" class="btn">Obtenir votre devis gratuit</a>
+
+        <p style="margin-top:15px; font-size:0.95rem; opacity:0.95;">
+⭐ Déjà plusieurs projets soumis au Québec • 🔒 Gratuit • Sans engagement • Entrepreneurs RBQ
+</p>
+    </div>
+</section>
+
+    <section id="comment" class="etapes">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #2c3e50;">Comment ça marche ?</h2>
+            <div class="etape">
+                <h3>1️⃣ Remplissez le formulaire</h3>
+                <p>Expliquez-nous votre projet en 2 minutes</p>
+            </div>
+            <div class="etape">
+                <h3>2️⃣ Rendez-vous gratuit</h3>
+                <p>Un entrepreneur licencié RBQ vous contacte pour évaluer vos besoins</p>
+            </div>
+            <div class="etape">
+                <h3>3️⃣ Soumission claire</h3>
+                <p>Recevez jusqu’à 3 soumissions claires et choisissez librement</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #2c3e50;">Nos spécialités</h2>
+            <div class="service-grid">
+                <div class="service">
+                    <h3>🚪 Portes & Fenêtres</h3>
+                    <p>Remplacement complet ou partiel. Économies d'énergie garanties.</p>
+                </div>
+                <div class="service">
+                    <h3>🍳 Cuisines</h3>
+                    <p>Rénovation clé en main. Design moderne à prix compétitif.</p>
+                </div>
+                <div class="service">
+                    <h3>🛁 Salles de bain</h3>
+                    <p>Transformation complète. Plomberie, carrelage, douche italienne.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formulaire" class="form-section">
+    <div class="container">
+        <div class="form-container">
+
+            <h2 style="text-align: center; margin-bottom: 2rem; color: #2c3e50;">
+                📋 Demandez votre devis gratuit
+            </h2>
+
+            <!-- 🔹 TEXTE DE RÉASSURANCE (ÉTAPE 4) -->
+            <p style="text-align:center; margin-bottom:20px; font-weight:bold; color:#27ae60;">
+                ✔ Service 100 % gratuit pour les propriétaires • ✔ Aucun engagement
+            </p>
+
+            <!-- 🔹 MESSAGE DE SUCCÈS (CACHÉ AU DÉPART) -->
+            <div id="success-message" class="success-message">
+                ✅ Merci ! Nous vous contactons sous 24h avec les meilleurs entrepreneurs pour votre projet.
+            </div>
+
+            <form
+  id="reno-form"
+  action="https://formspree.io/f/mpqzbody"
+  method="POST"
+>
+<input type="hidden" name="_subject" value="Nouvelle demande de devis RénovAction">
+                    <!-- Coordonnées client -->
+                    <div class="form-group">
+                        <label>👤 Nom complet *</label>
+                        <input type="text" name="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label>📧 Courriel *</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>📞 Téléphone *</label>
+                        <input type="tel" name="telephone" placeholder="514-000-0000" required>
+                    </div>
+                    
+                    <!-- Adresse -->
+                    <div class="form-group">
+                        <label>🏠 Adresse du projet *</label>
+                        <input type="text" name="adresse" placeholder="123 Rue Example, Montréal, QC" required>
+                    </div>
+                    
+                    <!-- Type de travaux -->
+                    <div class="form-group">
+                        <label>🔨 Type de travaux principal *</label>
+                        <select name="type_travaux" required>
+                            <option value="">Choisissez...</option>
+                            <option value="portes_fenetres">Portes & Fenêtres</option>
+                            <option value="cuisine">Cuisine</option>
+                            <option value="salle_bain">Salle de bain</option>
+                            <option value="autre">Autre rénovation</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Détails projet -->
+                    <div class="form-group">
+                        <label>📏 Nombre approximatif d'unités</label>
+                        <select name="quantite">
+                            <option value="">À préciser</option>
+                            <option value="1-3">1 à 3</option>
+                            <option value="4-6">4 à 6</option>
+                            <option value="7+">7 ou plus</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>💰 Budget approximatif</label>
+                        <select name="budget">
+                            <option value="">À discuter</option>
+                            <option value="moins_10k">Moins de 10 000 $</option>
+                            <option value="10k_25k">10 000 - 25 000 $</option>
+                            <option value="25k_50k">25 000 - 50 000 $</option>
+                            <option value="plus_50k">Plus de 50 000 $</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>⏰ Délai souhaité</label>
+                        <select name="delai">
+                            <option value="">Dès que possible</option>
+                            <option value="1_mois">Dans 1 mois</option>
+                            <option value="3_mois">Dans 3 mois</option>
+                            <option value="6_mois">Dans 6 mois</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Détails supplémentaires -->
+                    <div class="form-group">
+                        <label>📝 Détails du projet (optionnel)</label>
+                        <textarea name="details" rows="4" placeholder="Ex: 5 fenêtres à changer, condo étage 3, budget max 15k..."></textarea>
+                    </div>
+                    
+                    <!-- Urgence -->
+                    <div class="form-group">
+                        <label>🚨 Projet urgent ?</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="urgent"> Oui, contactez-moi aujourd'hui</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+    <label>🧾 Référé par (optionnel)</label>
+    <input type="text" name="referer" placeholder="Nom de votre représentant ou personne qui vous a recommandé">
+</div>
+                    <button type="submit" class="btn-submit">📤 Envoyer ma demande de soumission</button>
+<p style="text-align:center; font-size:0.9rem; margin-top:10px; color:#555;">
+🔒 Vos informations sont confidentielles • Aucun spam
+</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 RénovAction | 📞 514-358-5297 | Entrepreneurs licenciés RBQ</p>
+        </div>
+    </footer>
+<script>
+const form = document.getElementById("reno-form");
+const successMessage = document.getElementById("success-message");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      form.style.display = "none";
+      successMessage.style.display = "block";
+    } else {
+      alert("❌ Une erreur est survenue. Veuillez réessayer.");
+    }
+  })
+  .catch(() => {
+    alert("❌ Problème de connexion. Vérifiez votre réseau.");
+  });
+});
+</script>
+    
+
+</body>
+</html>
