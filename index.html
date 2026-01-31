@@ -37,7 +37,7 @@ nav{display:flex;align-items:center;justify-content:space-between;height:72px}
   background:#fff;color:#2c3e50;padding:28px;border-radius:10px;
   box-shadow:0 20px 50px rgba(0,0,0,.35)
 }
-.hero-form h3{text-align:center;margin-bottom:16px}
+.hero-form h3{text-align:center;margin-bottom:10px}
 label{font-weight:700;font-size:.9rem;display:block;margin-top:10px}
 input,select{
   width:100%;padding:12px;margin-top:6px;border:1px solid #d1d5db;border-radius:6px
@@ -141,10 +141,16 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:40px 0}
     </div>
 
     <div id="form" class="hero-form">
-      <h3>Demande rapide</h3>
+      <h3>Obtenez vos soumissions gratuitement</h3>
+      <p style="text-align:center;font-size:0.9rem;color:#555;margin-bottom:15px;">
+        ✔ Gratuit • ✔ Sans engagement • ✔ Entrepreneurs RBQ
+      </p>
+
       <form action="https://formspree.io/f/mpqzbody" method="POST">
+        <input type="hidden" name="_subject" value="Nouvelle demande – Soumission RénovAction">
+
         <label>Type de projet</label>
-        <select required>
+        <select name="projet" required>
           <option value="">Choisir...</option>
           <option>Cuisine</option>
           <option>Salle de bain</option>
@@ -154,12 +160,16 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:40px 0}
         </select>
 
         <label>Code postal</label>
-        <input type="text" required>
+        <input type="text" name="code_postal" placeholder="Ex : H2X 1Y4" required>
 
         <label>Téléphone</label>
-        <input type="tel" required>
+        <input type="tel" name="telephone" placeholder="Ex : 514-000-0000" required>
 
-        <button class="btn-submit">Obtenir mes soumissions</button>
+        <button class="btn-submit">Recevoir mes soumissions</button>
+
+        <p style="text-align:center;font-size:0.8rem;color:#777;margin-top:10px;">
+          🔒 Vos informations sont confidentielles
+        </p>
       </form>
     </div>
   </div>
@@ -189,10 +199,22 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:40px 0}
   <div class="container">
     <h2 class="section-title">Projets populaires</h2>
     <div class="projects-grid">
-      <div class="project"><img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?q=80&w=800&auto=format&fit=crop"><div>Cuisine</div></div>
-      <div class="project"><img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=800&auto=format&fit=crop"><div>Salle de bain</div></div>
-      <div class="project"><img src="https://images.unsplash.com/photo-1599423300746-b62533397364?q=80&w=800&auto=format&fit=crop" alt="Travaux de toiture"><div>Toiture</div></div>
-      <div class="project"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop"><div>Portes & fenêtres</div></div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?q=80&w=800&auto=format&fit=crop" alt="Rénovation cuisine">
+        <div>Cuisine</div>
+      </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=800&auto=format&fit=crop" alt="Rénovation salle de bain">
+        <div>Salle de bain</div>
+      </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=800&auto=format&fit=crop" alt="Toiture résidentielle">
+        <div>Toiture</div>
+      </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Portes et fenêtres">
+        <div>Portes & fenêtres</div>
+      </div>
     </div>
   </div>
 </section>
@@ -228,4 +250,3 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:40px 0}
 
 </body>
 </html>
-
