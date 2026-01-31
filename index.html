@@ -1,166 +1,122 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soumission RénovAction | Comparez. Choisissez. Rénovez.</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soumission RénovAction | Comparez, choisissez et rénovez</title>
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;color:#2c3e50;line-height:1.6;background:#f5f6f8}
+a{text-decoration:none;color:inherit}
+.container{max-width:1200px;margin:auto;padding:0 20px}
 
-    /* HEADER */
-    header {
-      background: #2c3e50;
-      color: white;
-      padding: 1rem 0;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
+/* HEADER */
+header{background:#fff;border-bottom:1px solid #e5e7eb;position:fixed;top:0;width:100%;z-index:1000}
+nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-size:1.6rem;font-weight:800;color:#1f3a5f}
+.nav-btn{background:#f39c12;color:#fff;padding:12px 18px;border-radius:6px;font-weight:700}
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+/* HERO */
+.hero{
+  margin-top:72px;
+  background:
+    linear-gradient(rgba(15,23,42,.6),rgba(15,23,42,.6)),
+    url("https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1600&auto=format&fit=crop");
+  background-size:cover;background-position:center;
+  color:#fff;padding:90px 0
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero h1{font-size:3rem;margin-bottom:16px}
+.hero p{font-size:1.2rem;margin-bottom:18px}
+.hero ul{list-style:none;margin-top:10px}
+.hero li{margin-bottom:8px;font-size:1.05rem}
 
-    .logo {
-      font-size: 1.6rem;
-      font-weight: bold;
-    }
+/* HERO FORM */
+.hero-form{
+  background:#fff;color:#2c3e50;padding:28px;border-radius:10px;
+  box-shadow:0 20px 50px rgba(0,0,0,.35)
+}
+.hero-form h3{text-align:center;margin-bottom:16px}
+label{font-weight:700;font-size:.9rem;display:block;margin-top:10px}
+input,select{
+  width:100%;padding:12px;margin-top:6px;border:1px solid #d1d5db;border-radius:6px
+}
+.btn-submit{
+  margin-top:18px;background:#f39c12;color:#fff;border:none;
+  width:100%;padding:15px;font-size:1.05rem;border-radius:6px;cursor:pointer
+}
+.btn-submit:hover{background:#e67e22}
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, #3498db, #2980b9);
-      color: white;
-      padding: 160px 0 100px;
-    }
+/* TRUST BAR */
+.trust{background:#fff;padding:26px 0}
+.trust-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;text-align:center;font-weight:700
+}
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
+/* SECTIONS */
+section{padding:80px 0}
+.section-title{text-align:center;font-size:2.4rem;margin-bottom:46px}
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
+/* STEPS */
+.steps{background:#f5f6f8}
+.steps-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px
+}
+.step{
+  background:#fff;padding:28px;border-radius:10px;
+  box-shadow:0 8px 24px rgba(0,0,0,.12);text-align:center
+}
 
-    .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 1.5rem;
-    }
+/* PROJECTS */
+.projects{background:#fff}
+.projects-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px
+}
+.project{
+  background:#f5f6f8;border-radius:10px;overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,.1)
+}
+.project img{width:100%;height:160px;object-fit:cover}
+.project div{padding:18px;font-weight:700}
 
-    .hero ul {
-      list-style: none;
-      margin-top: 15px;
-    }
+/* STATS */
+.stats{background:#1f3a5f;color:#fff}
+.stats-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;
+  text-align:center
+}
+.stat strong{font-size:2.2rem;display:block}
 
-    .hero li {
-      margin-bottom: 8px;
-      font-size: 1.05rem;
-    }
+/* TESTIMONIALS */
+.testimonials{background:#f5f6f8}
+.test-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px
+}
+.test{
+  background:#fff;padding:26px;border-radius:10px;
+  box-shadow:0 8px 22px rgba(0,0,0,.12)
+}
+.test span{font-weight:700;color:#f39c12}
 
-    /* FORM HERO */
-    .hero-form {
-      background: white;
-      color: #333;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
+/* CTA */
+.cta{background:#f39c12;color:#fff;text-align:center}
+.cta h2{font-size:2.6rem;margin-bottom:18px}
+.cta a{
+  display:inline-block;background:#1f3a5f;color:#fff;
+  padding:16px 28px;border-radius:8px;font-weight:800
+}
 
-    .hero-form h3 {
-      margin-bottom: 15px;
-      color: #2c3e50;
-      text-align: center;
-    }
+/* FOOTER */
+footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:40px 0}
 
-    label {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
-      font-size: 0.95rem;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
-    .btn-submit {
-      margin-top: 20px;
-      background: #e67e22;
-      color: white;
-      padding: 15px;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    .btn-submit:hover {
-      background: #d35400;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 80px 0;
-    }
-
-    .steps {
-      background: #f8f9fa;
-      text-align: center;
-    }
-
-    .steps h2 {
-      font-size: 2.4rem;
-      margin-bottom: 40px;
-      color: #2c3e50;
-    }
-
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-
-    .step {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    /* FOOTER */
-    footer {
-      background: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 40px 0;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero h1{font-size:2.1rem}
+}
+</style>
 </head>
 
 <body>
@@ -168,85 +124,106 @@
 <header>
   <nav class="container">
     <div class="logo">Soumission RénovAction</div>
+    <a href="#form" class="nav-btn">Obtenir des soumissions</a>
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="container hero-grid">
-
-    <!-- TEXTE -->
     <div>
-      <h1>Obtenez jusqu’à 3 soumissions de rénovation</h1>
-      <p>
-        Comparez des entrepreneurs licenciés RBQ près de chez vous.<br>
-        <strong>Gratuit. Rapide. Sans engagement.</strong>
-      </p>
-
+      <h1>Comparez des entrepreneurs qualifiés près de chez vous</h1>
+      <p><strong>Jusqu’à 3 soumissions de rénovation.</strong> Gratuit, rapide et sans engagement.</p>
       <ul>
-        <li>✔ Entrepreneurs vérifiés RBQ</li>
-        <li>✔ Jusqu’à 3 soumissions</li>
-        <li>✔ Aucun engagement</li>
+        <li>✔ Entrepreneurs licenciés RBQ</li>
+        <li>✔ Service 100 % gratuit</li>
+        <li>✔ Décision sans obligation</li>
       </ul>
     </div>
 
-    <!-- FORMULAIRE -->
-    <div class="hero-form">
+    <div id="form" class="hero-form">
       <h3>Demande rapide</h3>
-
       <form action="https://formspree.io/f/mpqzbody" method="POST">
-        <input type="hidden" name="_subject" value="Nouvelle soumission - RénovAction">
-
         <label>Type de projet</label>
-        <select name="type_travaux" required>
+        <select required>
           <option value="">Choisir...</option>
           <option>Cuisine</option>
           <option>Salle de bain</option>
+          <option>Toiture</option>
           <option>Portes & fenêtres</option>
           <option>Autre</option>
         </select>
 
         <label>Code postal</label>
-        <input type="text" name="code_postal" required>
+        <input type="text" required>
 
         <label>Téléphone</label>
-        <input type="tel" name="telephone" required>
+        <input type="tel" required>
 
-        <button type="submit" class="btn-submit">
-          Obtenir mes soumissions
-        </button>
+        <button class="btn-submit">Obtenir mes soumissions</button>
       </form>
     </div>
-
   </div>
 </section>
 
-<!-- COMMENT ÇA MARCHE -->
+<section class="trust">
+  <div class="container trust-grid">
+    <div>🔒 Données protégées</div>
+    <div>🏆 Entrepreneurs RBQ</div>
+    <div>⚡ Réponse rapide</div>
+    <div>💲 Sans frais</div>
+  </div>
+</section>
+
 <section class="steps">
   <div class="container">
-    <h2>Comment ça marche</h2>
-
+    <h2 class="section-title">Comment ça fonctionne</h2>
     <div class="steps-grid">
-      <div class="step">
-        <h3>1️⃣ Décrivez votre projet</h3>
-        <p>Formulaire simple et rapide.</p>
-      </div>
-
-      <div class="step">
-        <h3>2️⃣ Recevez vos soumissions</h3>
-        <p>Jusqu’à 3 entrepreneurs vous contactent.</p>
-      </div>
-
-      <div class="step">
-        <h3>3️⃣ Comparez et choisissez</h3>
-        <p>Vous décidez librement.</p>
-      </div>
+      <div class="step"><h3>1️⃣ Décrivez votre projet</h3><p>Formulaire simple et rapide.</p></div>
+      <div class="step"><h3>2️⃣ Recevez vos soumissions</h3><p>Jusqu’à 3 entrepreneurs vous contactent.</p></div>
+      <div class="step"><h3>3️⃣ Comparez et choisissez</h3><p>Vous décidez librement.</p></div>
     </div>
   </div>
+</section>
+
+<section class="projects">
+  <div class="container">
+    <h2 class="section-title">Projets populaires</h2>
+    <div class="projects-grid">
+      <div class="project"><img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?q=80&w=800&auto=format&fit=crop"><div>Cuisine</div></div>
+      <div class="project"><img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=800&auto=format&fit=crop"><div>Salle de bain</div></div>
+      <div class="project"><img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=800&auto=format&fit=crop"><div>Toiture</div></div>
+      <div class="project"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop"><div>Portes & fenêtres</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><strong>10 000+</strong> projets analysés</div>
+    <div class="stat"><strong>2 500+</strong> entrepreneurs</div>
+    <div class="stat"><strong>15+</strong> années d’expérience</div>
+    <div class="stat"><strong>100 %</strong> gratuit</div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <h2 class="section-title">Ils nous ont fait confiance</h2>
+    <div class="test-grid">
+      <div class="test">“Service rapide et efficace.” <span>— Marc, Montréal</span></div>
+      <div class="test">“Soumissions claires et sans pression.” <span>— Julie, Laval</span></div>
+      <div class="test">“Très professionnel du début à la fin.” <span>— Patrick, Québec</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Comparez, choisissez et rénovez</h2>
+  <a href="#form">Commencer maintenant</a>
 </section>
 
 <footer>
-  <p>© 2025 Soumission RénovAction • Entrepreneurs licenciés RBQ</p>
+  © 2025 Soumission RénovAction — Entrepreneurs licenciés RBQ
 </footer>
 
 </body>
