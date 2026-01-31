@@ -39,9 +39,11 @@ nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 }
 .hero-form h3{text-align:center;margin-bottom:10px}
 label{font-weight:700;font-size:.9rem;display:block;margin-top:10px}
-input,select{
-  width:100%;padding:12px;margin-top:6px;border:1px solid #d1d5db;border-radius:6px
+input,select,textarea{
+  width:100%;padding:12px;margin-top:6px;
+  border:1px solid #d1d5db;border-radius:6px
 }
+textarea{resize:vertical}
 .btn-submit{
   margin-top:18px;background:#f39c12;color:#fff;border:none;
   width:100%;padding:15px;font-size:1.05rem;border-radius:6px;cursor:pointer
@@ -147,6 +149,7 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:40px 0}
       </p>
 
       <form action="https://formspree.io/f/mpqzbody" method="POST">
+
         <input type="hidden" name="_subject" value="Nouvelle demande – Soumission RénovAction">
 
         <label>Type de projet</label>
@@ -156,8 +159,23 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:40px 0}
           <option>Salle de bain</option>
           <option>Toiture</option>
           <option>Portes & fenêtres</option>
+          <option>Rénovation complète</option>
           <option>Autre</option>
         </select>
+
+        <label>Budget approximatif</label>
+        <select name="budget">
+          <option value="">À discuter</option>
+          <option>Moins de 10 000 $</option>
+          <option>10 000 $ – 25 000 $</option>
+          <option>25 000 $ – 50 000 $</option>
+          <option>50 000 $ – 100 000 $</option>
+          <option>Plus de 100 000 $</option>
+        </select>
+
+        <label>Détails du projet (optionnel)</label>
+        <textarea name="details_projet" rows="3"
+          placeholder="Ex : surface, nombre de pièces, type de bâtiment, échéancier, etc."></textarea>
 
         <label>Code postal</label>
         <input type="text" name="code_postal" placeholder="Ex : H2X 1Y4" required>
@@ -165,11 +183,15 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:40px 0}
         <label>Téléphone</label>
         <input type="tel" name="telephone" placeholder="Ex : 514-000-0000" required>
 
+        <label>Qui vous a référé ? (optionnel)</label>
+        <input type="text" name="referer" placeholder="Nom du représentant ou de la personne">
+
         <button class="btn-submit">Recevoir mes soumissions</button>
 
         <p style="text-align:center;font-size:0.8rem;color:#777;margin-top:10px;">
-          🔒 Vos informations sont confidentielles
+          🔒 Vos informations sont confidentielles • Aucun engagement
         </p>
+
       </form>
     </div>
   </div>
