@@ -15,6 +15,7 @@ a{text-decoration:none;color:inherit}
 header{background:#fff;border-bottom:1px solid #e5e7eb;position:fixed;top:0;width:100%;z-index:1000}
 nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{font-size:1.6rem;font-weight:800;color:#1f3a5f}
+.nav-links a{font-weight:700}
 .nav-btn{background:#f39c12;color:#fff;padding:12px 18px;border-radius:6px;font-weight:700}
 
 /* HERO */
@@ -126,7 +127,12 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:40px 0}
 <header>
   <nav class="container">
     <div class="logo">Soumission RénovAction</div>
-    <a href="#form" class="nav-btn">Obtenir des soumissions</a>
+
+    <div style="display:flex;align-items:center;gap:20px;">
+      <a href="index.html" class="nav-links">Résidentiel</a>
+      <a href="commercial.html" class="nav-links">Commercial</a>
+      <a href="#form" class="nav-btn">Obtenir des soumissions</a>
+    </div>
   </nav>
 </header>
 
@@ -149,7 +155,6 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:40px 0}
       </p>
 
       <form action="https://formspree.io/f/mpqzbody" method="POST">
-
         <input type="hidden" name="_subject" value="Nouvelle demande – Soumission RénovAction">
 
         <label>Type de projet</label>
@@ -173,9 +178,9 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:40px 0}
           <option>Plus de 100 000 $</option>
         </select>
 
-        <label>Détails du projet (optionnel)</label>
+        <label>Détails du projet</label>
         <textarea name="details_projet" rows="3"
-          placeholder="Ex : surface, nombre de pièces, type de bâtiment, échéancier, etc."></textarea>
+          placeholder="Ex : surface, nombre de pièces, type de bâtiment, échéancier..."></textarea>
 
         <label>Code postal</label>
         <input type="text" name="code_postal" placeholder="Ex : H2X 1Y4" required>
@@ -191,83 +196,14 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:40px 0}
         <p style="text-align:center;font-size:0.8rem;color:#777;margin-top:10px;">
           🔒 Vos informations sont confidentielles • Aucun engagement
         </p>
-
       </form>
     </div>
   </div>
 </section>
 
-<section class="trust">
-  <div class="container trust-grid">
-    <div>🔒 Données protégées</div>
-    <div>🏆 Entrepreneurs RBQ</div>
-    <div>⚡ Réponse rapide</div>
-    <div>💲 Sans frais</div>
-  </div>
-</section>
-
-<section class="steps">
-  <div class="container">
-    <h2 class="section-title">Comment ça fonctionne</h2>
-    <div class="steps-grid">
-      <div class="step"><h3>1️⃣ Décrivez votre projet</h3><p>Formulaire simple et rapide.</p></div>
-      <div class="step"><h3>2️⃣ Recevez vos soumissions</h3><p>Jusqu’à 3 entrepreneurs vous contactent.</p></div>
-      <div class="step"><h3>3️⃣ Comparez et choisissez</h3><p>Vous décidez librement.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="projects">
-  <div class="container">
-    <h2 class="section-title">Projets populaires</h2>
-    <div class="projects-grid">
-      <div class="project">
-        <img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?q=80&w=800&auto=format&fit=crop" alt="Rénovation cuisine">
-        <div>Cuisine</div>
-      </div>
-      <div class="project">
-        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=800&auto=format&fit=crop" alt="Rénovation salle de bain">
-        <div>Salle de bain</div>
-      </div>
-      <div class="project">
-        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=800&auto=format&fit=crop" alt="Toiture résidentielle">
-        <div>Toiture</div>
-      </div>
-      <div class="project">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Portes et fenêtres">
-        <div>Portes & fenêtres</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="stats">
-  <div class="container stats-grid">
-    <div class="stat"><strong>10 000+</strong> projets analysés</div>
-    <div class="stat"><strong>2 500+</strong> entrepreneurs</div>
-    <div class="stat"><strong>15+</strong> années d’expérience</div>
-    <div class="stat"><strong>100 %</strong> gratuit</div>
-  </div>
-</section>
-
-<section class="testimonials">
-  <div class="container">
-    <h2 class="section-title">Ils nous ont fait confiance</h2>
-    <div class="test-grid">
-      <div class="test">“Service rapide et efficace.” <span>— Marc, Montréal</span></div>
-      <div class="test">“Soumissions claires et sans pression.” <span>— Julie, Laval</span></div>
-      <div class="test">“Très professionnel du début à la fin.” <span>— Patrick, Québec</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="cta">
-  <h2>Comparez, choisissez et rénovez</h2>
-  <a href="#form">Commencer maintenant</a>
-</section>
-
 <footer>
-  © 2025 Soumission RénovAction — Entrepreneurs licenciés RBQ
+  © 2025 Soumission RénovAction — Entrepreneurs licenciés RBQ<br>
+  Résidentiel | Commercial
 </footer>
 
 </body>
