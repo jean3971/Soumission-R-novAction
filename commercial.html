@@ -3,51 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Soumission RénovAction | Projets commerciaux</title>
+<title>Soumissions commerciales | Soumission RénovAction</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,Helvetica,sans-serif;color:#2c3e50;line-height:1.6;background:#f5f6f8}
+body{font-family:Arial,Helvetica,sans-serif;color:#2c3e50;background:#f5f6f8;line-height:1.6}
 a{text-decoration:none;color:inherit}
 .container{max-width:1200px;margin:auto;padding:0 20px}
 
 /* HEADER */
 header{background:#fff;border-bottom:1px solid #e5e7eb;position:fixed;top:0;width:100%;z-index:1000}
 nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{font-size:1.6rem;font-weight:800;color:#1f3a5f}
-.nav-links a{margin-right:20px;font-weight:700}
+.logo img{height:42px}
 .nav-btn{background:#f39c12;color:#fff;padding:12px 18px;border-radius:6px;font-weight:700}
 
 /* HERO */
 .hero{
   margin-top:72px;
   background:
-    linear-gradient(rgba(15,23,42,.7),rgba(15,23,42,.7)),
-    url("https://images.unsplash.com/photo-1581091215367-59ab6c1a1f36?q=80&w=1600&auto=format&fit=crop");
-  background-size:cover;background-position:center;
-  color:#fff;padding:100px 0
+    linear-gradient(rgba(15,23,42,.65),rgba(15,23,42,.65)),
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop");
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  padding:90px 0;
 }
-.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
 .hero h1{font-size:3rem;margin-bottom:16px}
 .hero p{font-size:1.2rem;margin-bottom:18px}
 .hero ul{list-style:none;margin-top:10px}
-.hero li{margin-bottom:8px}
+.hero li{margin-bottom:8px;font-size:1.05rem}
 
 /* FORM */
 .hero-form{
   background:#fff;color:#2c3e50;padding:28px;border-radius:10px;
   box-shadow:0 20px 50px rgba(0,0,0,.35)
 }
-.hero-form h3{text-align:center;margin-bottom:10px}
+.hero-form h3{text-align:center;margin-bottom:14px}
 label{font-weight:700;font-size:.9rem;display:block;margin-top:10px}
-input,select,textarea{
+input,select{
   width:100%;padding:12px;margin-top:6px;
   border:1px solid #d1d5db;border-radius:6px
 }
-textarea{resize:vertical}
 .btn-submit{
   margin-top:18px;background:#f39c12;color:#fff;border:none;
-  width:100%;padding:15px;font-size:1.05rem;border-radius:6px;cursor:pointer
+  width:100%;padding:15px;font-size:1.05rem;border-radius:6px;
+  cursor:pointer;font-weight:700
 }
 .btn-submit:hover{background:#e67e22}
 
@@ -55,29 +56,25 @@ textarea{resize:vertical}
 section{padding:80px 0}
 .section-title{text-align:center;font-size:2.4rem;margin-bottom:46px}
 
-/* TYPES */
-.types-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:22px;text-align:center
+/* PROJECTS */
+.projects{background:#fff}
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px
 }
-.type{
-  background:#fff;padding:30px;border-radius:10px;
-  box-shadow:0 8px 24px rgba(0,0,0,.12)
+.project{
+  background:#f5f6f8;border-radius:10px;overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,.1)
 }
-
-/* STATS */
-.stats{background:#1f3a5f;color:#fff}
-.stats-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:24px;text-align:center
-}
-.stat strong{font-size:2.2rem;display:block}
+.project img{width:100%;height:170px;object-fit:cover}
+.project div{padding:18px;font-weight:700}
 
 /* CTA */
-.cta{background:#f39c12;color:#fff;text-align:center}
+.cta{background:#1f3a5f;color:#fff;text-align:center}
 .cta h2{font-size:2.6rem;margin-bottom:18px}
 .cta a{
-  display:inline-block;background:#1f3a5f;color:#fff;
+  display:inline-block;background:#f39c12;color:#fff;
   padding:16px 28px;border-radius:8px;font-weight:800
 }
 
@@ -97,112 +94,118 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:40px 0}
 <header>
   <nav class="container">
     <div class="logo">
-  <img src="assets/logo.png" alt="Soumission RénovAction" style="height:42px;"></div>
-    <div class="nav-links">
+      <img src="https://raw.githubusercontent.com/jean3971/Soumission-R-novAction/main/assets/logo-renovaction.png" alt="Soumission RénovAction">
+    </div>
+    <div style="display:flex;align-items:center;gap:20px;">
       <a href="index.html">Résidentiel</a>
       <a href="commercial.html"><strong>Commercial</strong></a>
+      <a href="#form" class="nav-btn">Obtenir des soumissions</a>
     </div>
-    <a href="#form" class="nav-btn">Soumission commerciale</a>
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="container hero-grid">
+
     <div>
-      <h1>Soumissions pour projets commerciaux et multilogements</h1>
-      <p><strong>Entrepreneurs qualifiés pour projets d’envergure.</strong></p>
+      <h1>Soumissions de rénovation commerciale</h1>
+      <p><strong>Comparez des entrepreneurs spécialisés</strong> pour vos projets commerciaux et multi-logements.</p>
       <ul>
-        <li>✔ Projets commerciaux et immeubles à revenus</li>
-        <li>✔ Entrepreneurs assurés et licenciés</li>
-        <li>✔ Respect des délais et budgets</li>
+        <li>✔ Bureaux, commerces et immeubles à revenus</li>
+        <li>✔ Entrepreneurs qualifiés et assurés</li>
+        <li>✔ Service 100 % gratuit</li>
       </ul>
     </div>
 
     <div id="form" class="hero-form">
-      <h3>Demande de soumission commerciale</h3>
-      <p style="text-align:center;font-size:0.9rem;color:#555;margin-bottom:15px;">
-        Projets sérieux • Entrepreneurs spécialisés
-      </p>
+      <h3>Demande commerciale</h3>
 
       <form action="https://formspree.io/f/mpqzbody" method="POST">
-        <input type="hidden" name="_subject" value="Nouvelle demande COMMERCIALE – RénovAction">
+        <input type="hidden" name="_subject" value="Soumission commerciale - RénovAction">
 
         <label>Type de bâtiment</label>
-        <select name="type_batiment" required>
+        <select name="batiment" required>
           <option value="">Choisir...</option>
-          <option>Immeuble à logements</option>
-          <option>Commerce</option>
           <option>Bureaux</option>
-          <option>Industriel léger</option>
+          <option>Commerce / local</option>
+          <option>Immeuble à revenus</option>
+          <option>Entrepôt / industriel</option>
           <option>Autre</option>
         </select>
 
-        <label>Nombre d’unités / superficie</label>
-        <input type="text" name="dimension" placeholder="Ex : 12 logements ou 8 000 pi²">
+        <label>Superficie approximative</label>
+        <select name="superficie">
+          <option value="">À préciser</option>
+          <option>Moins de 2 000 pi²</option>
+          <option>2 000 – 5 000 pi²</option>
+          <option>5 000 – 10 000 pi²</option>
+          <option>10 000 pi² et +</option>
+        </select>
 
         <label>Budget estimé</label>
         <select name="budget">
           <option value="">À discuter</option>
-          <option>25 000 $ – 50 000 $</option>
-          <option>50 000 $ – 100 000 $</option>
-          <option>100 000 $ – 250 000 $</option>
-          <option>250 000 $ +</option>
+          <option>Moins de 50 000 $</option>
+          <option>50 000 – 100 000 $</option>
+          <option>100 000 – 250 000 $</option>
+          <option>250 000 $ et +</option>
         </select>
 
-        <label>Détails du projet</label>
-        <textarea name="details_projet" rows="3"
-          placeholder="Nature des travaux, échéancier, contraintes, etc."></textarea>
-
         <label>Code postal</label>
-        <input type="text" name="code_postal" required>
-
-        <label>Nom du contact</label>
-        <input type="text" name="nom" required>
+        <input type="text" name="postal" required>
 
         <label>Téléphone</label>
         <input type="tel" name="telephone" required>
 
-        <label>Qui vous a référé ? (optionnel)</label>
+        <label>Référé par (optionnel)</label>
         <input type="text" name="referer">
 
-        <button class="btn-submit">Recevoir des soumissions commerciales</button>
-
-        <p style="text-align:center;font-size:0.8rem;color:#777;margin-top:10px;">
-          🔒 Traitement confidentiel • Projets sérieux uniquement
-        </p>
+        <button class="btn-submit">Obtenir mes soumissions</button>
       </form>
     </div>
+
   </div>
 </section>
 
-<section>
+<!-- TYPES DE PROJETS COMMERCIAUX -->
+<section class="projects">
   <div class="container">
-    <h2 class="section-title">Types de projets pris en charge</h2>
-    <div class="types-grid">
-      <div class="type">🏢 Immeubles à revenus</div>
-      <div class="type">🏬 Commerces & franchises</div>
-      <div class="type">🏢 Bureaux professionnels</div>
-      <div class="type">🏗 Aires communes & mises aux normes</div>
-    </div>
-  </div>
-</section>
+    <h2 class="section-title">Types de projets commerciaux</h2>
 
-<section class="stats">
-  <div class="container stats-grid">
-    <div class="stat"><strong>+10 000</strong> projets analysés</div>
-    <div class="stat"><strong>2 500+</strong> entrepreneurs</div>
-    <div class="stat"><strong>15+</strong> ans d’expérience</div>
-    <div class="stat"><strong>Québec</strong> couverture complète</div>
+    <div class="projects-grid">
+
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop" alt="Rénovation de bureaux commerciaux">
+        <div>Bureaux & espaces corporatifs</div>
+      </div>
+
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b302a?q=80&w=800&auto=format&fit=crop" alt="Rénovation de commerces">
+        <div>Commerces & locaux commerciaux</div>
+      </div>
+
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=800&auto=format&fit=crop" alt="Immeuble à revenus">
+        <div>Immeubles à revenus</div>
+      </div>
+
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop" alt="Entrepôt industriel">
+        <div>Entrepôts & bâtiments industriels</div>
+      </div>
+
+    </div>
   </div>
 </section>
 
 <section class="cta">
-  <h2>Un projet commercial à planifier ?</h2>
-  <a href="#form">Parler à un spécialiste</a>
+  <h2>Un projet commercial en tête ?</h2>
+  <a href="#form">Parler à un entrepreneur</a>
 </section>
 
 <footer>
-  © 2025 Soumission RénovAction — Projets commerciaux et multilogements
+  © 2025 Soumission RénovAction — Rénovation commerciale
 </footer>
 
 </body>
