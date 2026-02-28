@@ -191,44 +191,62 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:40px 0}
 
       <form action="https://formspree.io/f/mpqzbody" method="POST"
 onsubmit="fbq('track','Lead',{value:25,currency:'CAD',content_name:'residentiel'});">
-        <input type="hidden" name="_subject" value="Nouvelle demande – Soumission ProAction ">
 
-        <label>Type de projet</label>
-        <select name="projet" required>
-          <option value="">Choisir...</option>
-          <option>Cuisine</option>
-          <option>Salle de bain</option>
-          <option>Toiture</option>
-          <option>Portes & fenêtres</option>
-          <option>Rénovation complète</option>
-          <option>Autre</option>
-        </select>
+<input type="hidden" name="_subject" value="Nouvelle demande – Soumission ProAction">
 
-        <label>Budget approximatif</label>
-        <select name="budget">
-          <option value="">À discuter</option>
-          <option>Moins de 10 000 $</option>
-          <option>10 000 $ – 25 000 $</option>
-          <option>25 000 $ – 50 000 $</option>
-          <option>50 000 $ – 100 000 $</option>
-          <option>Plus de 100 000 $</option>
-        </select>
+<label>Type de projet</label>
+<select name="projet" required>
+  <option value="">Choisir...</option>
+  <option>Cuisine</option>
+  <option>Salle de bain</option>
+  <option>Toiture</option>
+  <option>Portes & fenêtres</option>
+  <option>Rénovation complète</option>
+  <option>Autre</option>
+</select>
 
-        <label>Détails du projet</label>
-        <textarea name="details_projet" rows="3"
-          placeholder="Surface, nombre de pièces, type de bâtiment, échéancier…"></textarea>
+<label>Budget approximatif</label>
+<select name="budget" required>
+  <option value="">Choisir...</option>
+  <option>Moins de 10 000 $</option>
+  <option>10 000 $ – 25 000 $</option>
+  <option>25 000 $ – 50 000 $</option>
+  <option>50 000 $ – 100 000 $</option>
+  <option>Plus de 100 000 $</option>
+</select>
 
-        <label>Code postal</label>
-        <input type="text" name="code_postal" required>
+<label>Échéancier</label>
+<select name="echeancier" required>
+  <option value="">Choisir...</option>
+  <option>Le plus tôt possible</option>
+  <option>Dans 1 mois</option>
+  <option>Dans 3 mois</option>
+  <option>Dans 6 mois</option>
+  <option>Flexible / Pas pressé</option>
+</select>
 
-        <label>Téléphone</label>
-        <input type="tel" name="telephone" required>
+<label>Détails du projet</label>
+<textarea name="details_projet" rows="3" required
+placeholder="Surface, nombre de pièces, type de bâtiment, échéancier…"></textarea>
 
-        <label>Qui vous a référé ? (optionnel)</label>
-        <input type="text" name="referer">
+<label>Code postal</label>
+<input type="text" name="code_postal" required>
 
-        <button class="btn-submit">Recevoir mes soumissions</button>
-      </form>
+<label>Ville</label>
+<input type="text" name="ville" required>
+
+<label>Téléphone</label>
+<input type="tel" name="telephone" required>
+
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Qui vous a référé ?</label>
+<input type="text" name="referer" required>
+
+<button class="btn-submit">Recevoir mes soumissions</button>
+
+</form>
     </div>
   </div>
 </section>
