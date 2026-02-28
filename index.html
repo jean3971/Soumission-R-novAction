@@ -196,6 +196,13 @@ onsubmit="fbq('track','Lead',{value:40,currency:'CAD',content_name:'residentiel_
 value="https://flow.zohocloud.ca/110002471495/flow/webhook/incoming?zapikey=1001.61ed2109b05234b07c844a413ecdb125.177c6c36fd08d71fd8af94212f4321c9&isdebug=false">
 
 <input type="hidden" name="_subject" value="Nouvelle demande – Soumission ProAction">
+<input type="hidden" name="referer">
+<input type="hidden" name="utm_source">
+<input type="hidden" name="utm_campaign">
+<input type="hidden" name="utm_medium">
+<input type="hidden" name="utm_ad">
+<input type="hidden" name="fbclid">
+<input type="hidden" name="gclid">
 
 <label>Type de projet</label>
 <select name="projet" required>
@@ -247,7 +254,7 @@ placeholder="Surface, nombre de pièces, type de bâtiment, échéancier…"></t
 <input type="email" name="email" required>
 
 <label>Qui vous a référé ?</label>
-<input type="text" name="referer" required>
+<input type="text" name="referer_client">
 
 <button class="btn-submit">Recevoir mes soumissions</button>
 
@@ -318,6 +325,39 @@ placeholder="Surface, nombre de pièces, type de bâtiment, échéancier…"></t
 <br>
   Résidentiel | Commercial
 </footer>
+
+<script>
+
+function setField(name, value) {
+  if (!value) return;
+
+  // hidden field
+  const hidden = document.querySelector('input[name="' + name + '"]');
+  if (hidden && !hidden.value) {
+    hidden.value = value;
+  }
+
+  // champ visible pour referer
+  if (name === "referer") {
+    const visible = document.querySelector('input[name="referer_client"]');
+    if (visible && !visible.value) {
+      visible.value = value;
+    }
+  }
+}
+
+const params = new URLSearchParams(window.location.search);
+
+setField("referer", params.get("referer"));
+setField("utm_source", params.get("utm_source"));
+setField("utm_campaign", params.get("utm_campaign"));
+setField("utm_medium", params.get("utm_medium"));
+setField("utm_ad", params.get("utm_ad"));
+setField("fbclid", params.get("fbclid"));
+setField("gclid", params.get("gclid"));
+
+</script>
+
 
 </body>
 </html>
